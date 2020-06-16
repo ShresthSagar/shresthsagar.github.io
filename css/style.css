@@ -1,0 +1,88 @@
+.row-header{
+    margin: 0px;
+    padding: 0px;
+    /* color: rgb(255, 255, 255); */
+    /* background: blue; */
+}
+
+.row-content
+{
+    margin: auto;
+    padding : 50px 50px;
+    border-bottom: 2px ridge;
+    min-height: 250px;
+}
+
+.footer
+{
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+    background-color: rgb(255, 225, 225);
+
+}
+
+.address
+{
+    font-size: 80%;
+    margin: 0px;
+}
+
+.jumbotron
+{
+  
+    margin: 0px auto ;
+    padding-left: 50px 50px;
+    background-color: #a72c78;
+    color: floralwhite;
+    border-radius: 0px;
+ 
+}
+
+/* .row-header{
+    padding-left: 5%;
+} */
+
+/* @media (min-width:760px){
+    .row-header{ padding-left:5%}
+}
+/* @media (min-width:578px){
+    .row-header{ padding-left:4%}
+} */
+
+@media (max-width:900){
+    .row-header{ padding-left:17%}
+} 
+
+nav a{
+    cursor: pointer;
+    color: white;
+}
+a:hover
+{
+    color:red;
+}
+
+body
+{
+    padding: 56px 0px 0px 0px;
+    z-index:-1
+}
+
+.navbar ul{
+    padding-left: 20px;
+}
+.navbar-dark{
+    background-color: rgb(27, 20, 20);
+}
+.service{
+    margin-right: 5px;;
+}
+.btn-width
+{
+    width:85px;
+    /* height: 55px; */
+}
+.btn-text
+{
+    font-size:85%;
+}
