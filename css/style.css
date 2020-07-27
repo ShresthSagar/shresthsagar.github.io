@@ -33,7 +33,7 @@
   
     
     padding-left: 50px 50px;
-    background-color: #a72c78;
+    background-color: #b62d81;
     color: floralwhite;
     border-radius: 0px;
  
@@ -50,12 +50,12 @@
     .row-header{ padding-left:4%}
 } */
 
-@media (max-width:900){
+/* @media (max-width:900){
     .row-header{ padding-left:17%}
 } 
 @media (max-width:740){
     .carousel-item{ width:300px}
-} 
+}  */
 
 nav a{
     cursor: pointer;

@@ -1,0 +1,188 @@
+$lt-gray: #ddd;
+$background-dark: #000;
+$background: #a12b74;
+$background-light: #cf7cb0;
+$background-pale: rgb(255, 225, 225);
+
+// Height variables
+$carousel-item-height: 300px;
+
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+	margin:0px auto;
+	padding: $pad-up-dn $pad-left-right;
+}
+
+.row-header{
+    @include zero-margin(0px,0px);
+}
+
+.row-content {
+    @include zero-margin(30px,0px);
+    border-bottom: 1px ridge;
+    min-height:300px;
+}
+
+.footer{
+    background-color: $background-pale;
+    @include zero-margin(20px, 0px);
+}
+
+.jumbotron {
+    @include zero-margin(70px,30px);
+    background: $background ;
+    color:floralwhite;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
+
+.navbar-dark {
+     background-color: $background-dark;
+}
+
+.tab-content {
+    border-left: 1px solid $lt-gray;
+    border-right: 1px solid $lt-gray;
+    border-bottom: 1px solid $lt-gray;
+    padding: 10px;
+}
+
+.carousel {
+    background:$background-light;
+
+    .carousel-item {
+        height: $carousel-item-height;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 300px;
+            width:300px;
+        }
+    }
+}
+
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.address
+{
+    font-size: 80%;
+    margin: 0px;
+}
+
+#loginModal{
+    color: floralwhite;
+    .modal-header{
+
+        background: $background-dark;
+        .close{
+            color: floralwhite;
+
+        }
+    }
+    .modal-body{
+        background: $background;
+    }
+
+}
+#reservetable{
+    color: floralwhite;
+    .modal-header{
+
+        background: $background-dark;
+        .close{
+            color: floralwhite;
+        }
+    }
+    .modal-body{
+        background: $background;
+    }
+}
+
+
+
+
+
+nav {
+    a{
+    cursor: pointer;
+    color: white;
+    }
+}
+a:hover
+{
+    color:red;
+}
+
+
+.service{
+    margin-right: 5px;;
+}
+.btn-width
+{
+    width:85px;
+    /* height: 55px; */
+}
+.btn-text
+{
+    font-size:85%;
+}
+
+
+
+.carousel-caption {
+        position: absolute;
+        width: 58%;
+        z-index: 1;
+        padding-top: 10px;
+        left: 37%;
+        padding-bottom: 10px;
+        color:black;
+        text-align: center;
+    }
+
+
+.btn-reserve
+{
+    padding-top: 30px;
+}
+.dt-reserve
+{
+    padding-top: 25px;
+}
+
+.bg-card-color{
+    background: rgb(190, 188, 61)
+}
+
+.tab-content
+{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.pointer
+{
+    cursor: pointer;
+}
+
+#accordion {
+    p{
+    padding: 10px;
+    padding-left: 20px;
+    }
+}

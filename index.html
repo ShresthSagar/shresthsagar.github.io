@@ -9,15 +9,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity=
-    "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\styles.css">
 </head>
 
 <body>
@@ -58,8 +58,8 @@
                         </a>
                     </li>
                 </ul>
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                <span class="navbar-text nav-link">
+                    <a role="button" id="loginId" >
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -211,8 +211,7 @@
                     </a>
                 </div>
                 <div class="col-sm-3 align-self-center">
-                    <a role="button" class="btn-block btn nav-link btn-warning btn-md " data-toggle="modal"
-                        data-target="#reservetable">
+                    <a role="button" class="btn-block btn nav-link btn-warning btn-md " id="reserveId" >
                         Reserve Table
                     </a>
                 </div>
@@ -223,7 +222,7 @@
     <div class="container">
         <div class="row row-content">
             <div class="col-12">
-                <div id="firstcarousel" class="carousel slide justify-content-center" data-ride="carousel" >
+                <div id="firstcarousel" class="carousel slide justify-content-center" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item row active">
                             <div class="">
@@ -270,192 +269,196 @@
                             <span class="fa fa-pause" id="carousel-button-icon"></span>
                         </button>
 
-                    <ol class="carousel-indicators">
-                        <li data-target="#firstcarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#firstcarousel" data-slide-to="1"></li>
-                        <li data-target="#firstcarousel" data-slide-to="2"></li>
-                    </ol>
-                    <a class="carousel-control-prev" href="#firstcarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="false"></span>
-                        <span class="sr-only"></span>
-                    </a>
+                        <ol class="carousel-indicators">
+                            <li data-target="#firstcarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#firstcarousel" data-slide-to="1"></li>
+                            <li data-target="#firstcarousel" data-slide-to="2"></li>
+                        </ol>
+                        <a class="carousel-control-prev" href="#firstcarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                            <span class="sr-only"></span>
+                        </a>
 
-                    <a class="carousel-control-next" href="#firstcarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="false"></span>
-                        <span class="sr-only"></span>
-                    </a>
+                        <a class="carousel-control-next" href="#firstcarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                            <span class="sr-only"></span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!--    <div class="col-12  col-md-6">
-                <div id="secondcarousel" class="carousel  justify-content-center" data-ride="carousel">
-                    <div class="carousel-inner container container-carousel" role="listbox">
-                        <div class="carousel-item row active">
-                            <img class="col-12 col-md-8 d-block img-fluid" src="images/p1.jpg">
-                            <div class="col-12 offset-7 col-md carousel-caption d-none d-md-block">
-                                <p class="d-none d-sm-block mt-0">First slide</p>
+                <!--    <div class="col-12  col-md-6">
+                                <div id="secondcarousel" class="carousel  justify-content-center" data-ride="carousel">
+                                    <div class="carousel-inner container container-carousel" role="listbox">
+                                        <div class="carousel-item row active">
+                                            <img class="col-12 col-md-8 d-block img-fluid" src="images/p1.jpg">
+                                            <div class="col-12 offset-7 col-md carousel-caption d-none d-md-block">
+                                                <p class="d-none d-sm-block mt-0">First slide</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item row ">
+                                            <img class="col-12 col-md-8 d-block img-fluid" src="images/p2.jpg">
+                                            <div class="col-12 offset-7 col-md carousel-caption d-none d-md-block">
+                                                <p class="d-none d-sm-block mt-0">Second slide</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item row ">
+                                            <img class="col-12 col-md-8 d-block img-fluid" src="images/p3.jpg">
+                                            <div class="col-12 offset-7 carousel-caption d-none d-md-block">
+                                                <p class="d-none d-sm-block mt-0">Third slide Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#secondcarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#secondcarousel" data-slide-to="1"></li>
+                                        <li data-target="#secondcarousel" data-slide-to="2"></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div> -->
+                <div class="row row-content align-items-center">
+                    <div class="col-12 col-sm-3 order-sm-last col-md-3">
+                        <h3>Our Lipsmacking Culinary Creations</h3>
+                    </div>
+                    <div class="col-12 col-sm order-sm-first col-md">
+                        <div class="media">
+                            <img src="images/uthappizza.png" class="d-flex mr-3 img-thumbnail align-self-center">
+                            <div class="media-body">
+                                <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT </span>
+                                    <span class="badge badge-pill badge-secondary">$4.99</span></h2>
+                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                    Italian
+                                    pizza, topped with Cerignola
+                                    olives,
+                                    ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                             </div>
                         </div>
-                        <div class="carousel-item row ">
-                            <img class="col-12 col-md-8 d-block img-fluid" src="images/p2.jpg">
-                            <div class="col-12 offset-7 col-md carousel-caption d-none d-md-block">
-                                <p class="d-none d-sm-block mt-0">Second slide</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item row ">
-                            <img class="col-12 col-md-8 d-block img-fluid" src="images/p3.jpg">
-                            <div class="col-12 offset-7 carousel-caption d-none d-md-block">
-                                <p class="d-none d-sm-block mt-0">Third slide Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing
+                    </div>
+                </div>
+
+
+                <div class="row row-content align-items-center">
+                    <div class="col-12 col-sm-4 col-md-3">
+                        <h3>This Month's Promotions</h3>
+                    </div>
+                    <div class="col-12 col-sm-8 col-md-9">
+                        <div class="media">
+                            <div class="media-body">
+                                <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five
+                                    different salads, six enticing
+                                    appetizers,
+                                    six main entrees and five choicest desserts. Free flowing bubbly and soft drinks.
+                                    All
+                                    for
+                                    just $19.99 per person
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                    <ol class="carousel-indicators">
-                        <li data-target="#secondcarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#secondcarousel" data-slide-to="1"></li>
-                        <li data-target="#secondcarousel" data-slide-to="2"></li>
-                    </ol>
-                </div>
-            </div>
-        </div> -->
-            <div class="row row-content align-items-center">
-                <div class="col-12 col-sm-3 order-sm-last col-md-3">
-                    <h3>Our Lipsmacking Culinary Creations</h3>
-                </div>
-                <div class="col-12 col-sm order-sm-first col-md">
-                    <div class="media">
-                        <img src="images/uthappizza.png" class="d-flex mr-3 img-thumbnail align-self-center">
-                        <div class="media-body">
-                            <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT </span>
-                                <span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian
-                                pizza, topped with Cerignola
-                                olives,
-                                ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                            <img src="images/buffet.png" alt="Buffet"
+                                class="d-flex img-thumbnail ml-2 align-self-center">
                         </div>
                     </div>
                 </div>
-            </div>
 
-
-            <div class="row row-content align-items-center">
-                <div class="col-12 col-sm-4 col-md-3">
-                    <h3>This Month's Promotions</h3>
-                </div>
-                <div class="col-12 col-sm-8 col-md-9">
-                    <div class="media">
-                        <div class="media-body">
-                            <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                            <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five
-                                different salads, six enticing
-                                appetizers,
-                                six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All
-                                for
-                                just $19.99 per person
-                            </p>
-                        </div>
-                        <img src="images/buffet.png" alt="Buffet" class="d-flex img-thumbnail ml-2 align-self-center">
+                <div class="row row-content align-items-center">
+                    <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                        <h3>Meet our Culinary Specialists</h3>
                     </div>
-                </div>
-
-            </div>
-
-            <div class="row row-content align-items-center">
-                <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                    <h3>Meet our Culinary Specialists</h3>
-                </div>
-                <div class="col-12 col-sm order-sm-first col-md">
-                    <div class="media">
-                        <img src="images/uthappizza.png" alt="uttha"
-                            class="d-flex img-thumbnail mr-3 align-self-center">
-                        <div class="media-body">
-                            <h2 class="mt-0">Alberto Somayya</h2>
-                            <h4>Executive Chef</h4>
-                            <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
-                                experience having worked
-                                closely with
-                                whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian
-                                fusion
-                                experiences. </p>
+                    <div class="col-12 col-sm order-sm-first col-md">
+                        <div class="media">
+                            <img src="images/uthappizza.png" alt="uttha"
+                                class="d-flex img-thumbnail mr-3 align-self-center">
+                            <div class="media-body">
+                                <h2 class="mt-0">Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                    International
+                                    experience having worked
+                                    closely with
+                                    whos-who in the culinary world, he specializes in creating mouthwatering
+                                    Indo-Italian
+                                    fusion
+                                    experiences. </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row row-content">
-                <div class="col-12 ">
-                    <div class="card">
-                        <h3 class="card-header bg-card-color text-white">
-                            Reserve a table
-                        </h3>
-                        <div class="card-body">
-                            <form action="#" id="reserve" method="get">
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-12 col-md-3 ">
-                                            Number of Guests
+                <div class="row row-content">
+                    <div class="col-12 ">
+                        <div class="card">
+                            <h3 class="card-header bg-card-color text-white">
+                                Reserve a table
+                            </h3>
+                            <div class="card-body">
+                                <form action="#" id="reserve" method="get">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-12 col-md-3 ">
+                                                Number of Guests
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="r1"
+                                                        name="radio" value="r1">
+                                                    <label for="r1" class="custom-control-label">1</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="r2"
+                                                        name="radio" value="r2">
+                                                    <label class="custom-control-label" for="r2">2</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="r3"
+                                                        name="radio" value="r3">
+                                                    <label class="custom-control-label" for="r3">3</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="r4"
+                                                        name="radio" value="r4">
+                                                    <label class="custom-control-label" for="r4">4</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="r5"
+                                                        name="radio" value="r5">
+                                                    <label class="custom-control-label" for="r5">5</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="r6"
+                                                        name="radio" value="r6">
+                                                    <label class="custom-control-label" for="r6">6</label>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-md">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="r1" name="radio"
-                                                    value="r1">
-                                                <label for="r1" class="custom-control-label">1</label>
+                                        <div class="row dt-reserve">
+                                            <div class="col-12 col-md-3 ">
+                                                Date and Time
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="r2" name="radio"
-                                                    value="r2">
-                                                <label class="custom-control-label" for="r2">2</label>
+                                            <div class=" col-md-4 ">
+                                                <input type="text" placeholder="Date" class="form-control">
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="r3" name="radio"
-                                                    value="r3">
-                                                <label class="custom-control-label" for="r3">3</label>
+                                            <div class="col-md-4">
+                                                <input type="text" placeholder="Time" class="form-control">
                                             </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="r4" name="radio"
-                                                    value="r4">
-                                                <label class="custom-control-label" for="r4">4</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="r5" name="radio"
-                                                    value="r5">
-                                                <label class="custom-control-label" for="r5">5</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="r6" name="radio"
-                                                    value="r6">
-                                                <label class="custom-control-label" for="r6">6</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-3 offset-md-3  btn-reserve">
+                                                <!-- <a role="button" class="btn btn-primary" href="#">Reserve</a> -->
+                                                <input type="submit" class="btn btn-block btn-primary" value="Reserve">
+                                                <!-- <a class="btn btn-primary" type="button">Reserve</a> -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row dt-reserve">
-                                        <div class="col-12 col-md-3 ">
-                                            Date and Time
-                                        </div>
-                                        <div class=" col-md-4 ">
-                                            <input type="text" placeholder="Date" class="form-control">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <input type="text" placeholder="Time" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 col-md-3 offset-md-3  btn-reserve">
-                                            <!-- <a role="button" class="btn btn-primary" href="#">Reserve</a> -->
-                                            <input type="submit" class="btn btn-block btn-primary" value="Reserve">
-                                            <!-- <a class="btn btn-primary" type="button">Reserve</a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
-    
         <footer class="footer">
             <div class="container">
                 <div class="row">
@@ -508,16 +511,19 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity=
-        "sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity=
-        "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity=
-        "sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
         <script type="text/javascript">
             document.getElementById("non-smoking").click();
         </script>
-    <!-- <script>
+        <!-- <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
@@ -528,15 +534,16 @@
             });
         </script> -->
         <script>
-             $('#firstcarousel').carousel({interval:3000});
-            $(document).ready(function () {
-               
+            $('#firstcarousel').carousel({ interval: 3000 });
+
+            $(document).ready(function () 
+            {
                 $("#carouselButton").click(function () {
                     if ($("#carouselButton").children("span").hasClass('fa-pause')) {
                         $("#firstcarousel").carousel('pause');
                         // pause:true;
                         // interval : false;
-                        $('.carousel').carousel({ interval: false });
+                        // $('.carousel').carousel({ interval: false });
                         $("#carouselButton").children("span").removeClass('fa-pause');
                         $("#carouselButton").children("span").addClass('fa-play');
                     }
@@ -549,7 +556,14 @@
                         $("#carouselButton").children("span").addClass('fa-pause');
                     }
                 });
-                })
+            });
+            
+            $('#loginId').click(function(){
+                $('#loginModal').modal('toggle');
+            });
+            $('#reserveId').click(function(){
+                $('#reservetable').modal('toggle');
+            });
         </script>
 </body>
 
