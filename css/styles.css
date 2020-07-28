@@ -5,7 +5,7 @@
 .row-content {
   margin: 0px auto;
   padding: 30px 0px;
-  border-bottom: 1px ridge;
+  border-bottom: 2px ridge;
   min-height: 300px; }
 
 .footer {
@@ -46,13 +46,7 @@ body {
       top: 0;
       left: 0;
       min-height: 300px;
-      width: 300px; }
-
-#carouselButton {
-  right: 0px;
-  position: absolute;
-  bottom: 0px;
-  z-index: 1; }
+      min-width: 350px; }
 
 .address {
   font-size: 80%;
@@ -72,8 +66,7 @@ body {
   #reservetable .modal-header {
     background: #000; }
     #reservetable .modal-header .close {
-      color: floralwhite; 
-    }
+      color: floralwhite; }
   #reservetable .modal-body {
     background: #a12b74; }
 
@@ -104,6 +97,14 @@ a:hover {
   color: black;
   text-align: center; }
 
+@media (max-width: 1200px) {
+  .carousel-item img {
+    width: 100%; } }
+
+@media (min-width: 1200px) {
+  .carousel-item img {
+    width: 350px; } }
+
 .btn-reserve {
   padding-top: 30px; }
 
@@ -125,3 +126,9 @@ a:hover {
 #accordion p {
   padding: 10px;
   padding-left: 20px; }
+
+.btn, #reserveId {
+  opacity: 0.9;
+  box-shadow: 2px 4px 5px black; }
+  .btn:hover, #reserveId:hover {
+    opacity: 1; }

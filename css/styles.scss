@@ -18,7 +18,7 @@ $carousel-item-height: 300px;
 
 .row-content {
     @include zero-margin(30px,0px);
-    border-bottom: 1px ridge;
+    border-bottom: 2px ridge;
     min-height:300px;
 }
 
@@ -65,17 +65,11 @@ body{
             top: 0;
             left: 0;
             min-height: 300px;
-            width:300px;
+            min-width: 350px;
         }
     }
 }
 
-#carouselButton {
-    right:0px;
-    position: absolute;
-    bottom: 0px;
-    z-index: 1;
-}
 
 .address
 {
@@ -153,7 +147,12 @@ a:hover
         color:black;
         text-align: center;
     }
-
+    @media (max-width:1200px){
+        .carousel-item img{ width:100%}
+    }  
+    @media (min-width:1200px){
+      .carousel-item img{ width:350px}
+  }  
 
 .btn-reserve
 {
@@ -186,3 +185,22 @@ a:hover
     padding-left: 20px;
     }
 }
+
+.btn,#reserveId{
+    opacity:0.9;
+    box-shadow: 2px 4px 5px black;
+    &:hover{
+        opacity: 1;    
+    }
+  }
+// #carouselButton {
+//     right:0px;
+//     position: absolute;
+//     bottom: 0px;
+//     z-index: 2;
+// }
+// .clicked{
+//     position: relative;
+//     top:2px;
+//     box-shadow: none;
+// }
