@@ -199,6 +199,16 @@ a:hover
     &:hover{
         opacity: 1;    
     }
+    &:active{
+        text-decoration: underline;
+    }
+    &:focus{
+        text-decoration: underline;
+    }
+  }
+  #reserveId{
+      color:black;
+      font-weight: bold;
   }
 // #carouselButton {
 //     right:0px;

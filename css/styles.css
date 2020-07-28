@@ -137,3 +137,11 @@ a:hover {
   box-shadow: 2px 4px 5px black; }
   .btn:hover, #reserveId:hover {
     opacity: 1; }
+  .btn:active, #reserveId:active {
+    text-decoration: underline; }
+  .btn:focus, #reserveId:focus {
+    text-decoration: underline; }
+
+#reserveId {
+  color: black;
+  font-weight: bold; }
