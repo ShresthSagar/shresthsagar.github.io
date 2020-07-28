@@ -1,3 +1,6 @@
+img {
+  max-width: 100%; }
+
 .row-header {
   margin: 0px auto;
   padding: 0px 0px; }
@@ -18,6 +21,8 @@
   padding: 70px 30px;
   background: #a12b74;
   color: floralwhite; }
+  .jumbotron h1, .jumbotron p, .jumbotron a {
+    word-wrap: break-word; }
 
 address {
   font-size: 80%;

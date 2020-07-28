@@ -12,6 +12,9 @@ $carousel-item-height: 300px;
 	padding: $pad-up-dn $pad-left-right;
 }
 
+img{
+    max-width: 100%;
+}
 .row-header{
     @include zero-margin(0px,0px);
 }
@@ -31,6 +34,10 @@ $carousel-item-height: 300px;
     @include zero-margin(70px,30px);
     background: $background ;
     color:floralwhite;
+    h1,p,a{
+        word-wrap: break-word;
+    }
+
 }
 
 address{
